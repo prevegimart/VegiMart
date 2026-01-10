@@ -1,0 +1,92 @@
+.carousel-wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.left-panel {
+  background-color: #007bff;
+  color: white;
+  padding: 30px 20px;
+  width: 300px;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.left-panel h2 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.left-panel p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.arrow-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.arrow {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  margin-left: -50px; /* creates the overlap effect */
+  z-index: 1;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 339px;
+  height: 291px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}

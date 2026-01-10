@@ -1,0 +1,148 @@
+/* ================================
+   METRICS SECTION – CARD STYLE
+================================ */
+
+.metrics-section {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f4fff7 0%, #ffffff 100%);
+  text-align: center;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+
+.metrics-header {
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.metrics-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.metrics-header h2 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 20px 0;
+  font-weight: 800;
+  color: #1b1b1b;
+}
+
+.metrics-header p {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ---------- GRID ---------- */
+
+.metrics-grid {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+}
+
+/* ---------- CARD ---------- */
+
+.metric-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 42px 30px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* subtle top accent */
+.metric-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+
+.metric-card:hover {
+  transform: translateY(-12px);
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- ICON ---------- */
+
+.metric-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 16px;
+  background: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+
+/* ---------- VALUE ---------- */
+
+.metric-value {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+/* ---------- LABEL ---------- */
+
+.metric-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+/* ---------- DESCRIPTION ---------- */
+
+.metric-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.55;
+}
+
+/* ---------- FOOTER ---------- */
+
+.metrics-footer {
+  margin-top: 70px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+  .metrics-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .metric-value {
+    font-size: 2.2rem;
+  }
+}

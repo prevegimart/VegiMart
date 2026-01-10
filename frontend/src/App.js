@@ -1,0 +1,17 @@
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
+import AppRoutes from './Routes'; 
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <AppRoutes />
+      </div>
+    </Router>
+  );
+}
+
+export default App;

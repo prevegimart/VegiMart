@@ -1,0 +1,83 @@
+.partner-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fefefe, #e8f3ef);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Navbar */
+.partner-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.partner-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.partner-navbar li {
+  font-size: 16px;
+  cursor: pointer;
+  color: #2f5d50;
+  font-weight: 500;
+}
+
+.logo {
+  font-size: 28px;
+}
+
+/* Main Container */
+.partner-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px;
+  gap: 40px;
+}
+
+/* Cards */
+.partner-card {
+  background: transparent;
+  text-align: center;
+  max-width: 320px;
+}
+
+.partner-card img {
+  width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.partner-card p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Arrow Button */
+.arrow-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover {
+  transform: translateX(6px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .partner-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

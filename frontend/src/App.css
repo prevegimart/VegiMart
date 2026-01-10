@@ -1,0 +1,596 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.landing-container {
+  background: linear-gradient(to bottom, #f4f8fc 60%, #ffffff);
+  text-align: center;
+  padding: 100px 20px;
+  font-family:'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primary-btn {
+  background-color: #001380;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.primary-btn:hover {
+  background-color: rgb(87, 171, 204);
+  transition: background-color 0.3s ease;
+  padding: 15px 30px;
+  /* font-size: 16px; */
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+.dynamic-text{
+  color: #1f95ff;
+}
+
+.secondary-btn {
+  background-color: rgb(189, 187, 216);
+  color: black;
+  border: 1px solid #ffffff;
+  padding: 15px 30px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  /* font-size: large; */
+}
+.secondary-btn:hover {
+  background-color: rgb(167, 209, 226);
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+/* .image-container {
+  margin-top: 20px;
+  text-align: center;
+}
+.image-container1 {
+  text-align: left;
+}
+
+.dashboard-image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+.dashboard-image1 {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+} */
+
+/* Parent container for the images */
+/* General container styles */
+.landing-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+/* Flexbox container for all three image containers */
+.image-group {
+  display: flex;
+  justify-content: space-between; /* Space out the images equally */
+  gap: 20px; /* Space between images */
+  margin-top: 20px;
+}
+
+
+.image-container, .image-container1, .image-container2 {
+  text-align: center;
+}
+
+
+
+.dashboard-image, .dashboard-image1, .dashboard-image2 {
+  height: auto;
+  border-radius: 8px;
+}
+
+.dashboard-image {
+  max-width: 80%;
+  margin-left: -140px; 
+}
+
+.dashboard-image1{
+  max-width: 100%; 
+  margin-top: 70px;
+}
+ .dashboard-image2 {
+  max-width: 200%; 
+  margin-left: -140px; 
+  height: 220px;
+  margin-top: 76px;
+}
+
+
+@media (max-width: 768px) {
+  .image-group {
+    flex-direction: column; 
+    gap: 10px; 
+  }
+
+  /* .dashboard-image, .dashboard-image1, .dashboard-image2 {
+    max-width: 50%; 
+  } */
+
+  .dashboard-image {
+    max-width: 100%; 
+    margin-left: 10px;
+  }
+  .dashboard-image1 {
+    max-width: 50%; 
+  }
+  .dashboard-image2 {
+    max-width: 50%; 
+    margin-left: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .dashboard-image1, .dashboard-image2 {
+    max-width: 70%;
+  }
+}
+
+.dynamic-text::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  opacity: 0.9;
+}
+
+.metrics-container {
+  background-color: #f4f8fc; 
+  color: rgb(10, 10, 10);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.metrics-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.metrics-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.metric-item {
+  text-align: center;
+}
+
+.metric-item h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.metric-item p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-left: 12px;
+}
+
+.logo-container img {
+  max-width: 90px;
+  opacity: 896.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logo-container img:hover {
+  opacity: 1;
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  .metrics-header {
+    font-size: 16px;
+  }
+
+  .metrics-grid {
+    gap: 20px;
+  }
+
+  .metric-item h2 {
+    font-size: 28px;
+  }
+
+  .metric-item p {
+    font-size: 12px;
+  }
+
+  /* Adjust logo container for smaller screens */
+  .logo-container {
+    gap: 15px;
+  }
+
+  .logo-container img {
+    max-width: 100px;
+  }
+}
+
+/* For screens 480px and below (e.g., mobile) */
+@media (max-width: 480px) {
+  .metrics-header {
+    font-size: 14px;
+  }
+
+  .metrics-grid {
+    gap: 10px;
+    flex-direction: column; /* Stack the items vertically */
+  }
+
+  .metric-item h2 {
+    font-size: 24px;
+  }
+
+  .metric-item p {
+    font-size: 12px;
+  }
+
+  /* Adjust logo container for mobile screens */
+  .logo-container {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .logo-container img {
+    max-width: 80px;
+  }
+}
+
+
+
+/* Compliance section */
+
+/* Container for the whole section */
+.compliance-container1 {
+  background-color: #ffffff;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.compliance-header {
+  background-color: #ffffff;
+  color: rgb(5, 2, 2);
+  padding: 50px 0px;
+  text-align: center;
+  margin-bottom: -99px;
+  margin-top: -46px;
+}
+.compliance-grid{
+  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+  padding: 50px 50px;
+  text-align: center;
+}
+/* Header style */
+.compliance-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.compliance-header p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Grid layout for items */
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.compliance-item {
+  background-color: #000000;
+  padding: 20px 82px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.compliance-item:hover {
+  background-color: #000000;
+  transform: translateY(-10px);
+}
+
+/* Icon style inside each item */
+.compliance-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.compliance-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.compliance-item p {
+  font-size: 14px;
+}
+
+/* FooterSection page css */
+
+/* General styles */
+body {
+  margin: 0;
+  font-family:'Poppins', sans-serif;
+}
+
+.footer-container {
+  /* background-color: #4d4747; */
+  background-color: #000000;
+  color: white;
+  padding: 60px 20px;
+  margin-top: -49px;
+}
+
+.footer-header {
+  text-align: center;
+  margin-bottom: 40px;
+  /* color:#111 */
+  color: white;
+}
+
+.footer-header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-buttons .btn-trial,
+.footer-buttons .btn-demo {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.footer-buttons .btn-demo:hover {
+  background-color: rgb(11, 132, 180);
+  transition: background-color 0.3s ease;
+}
+.footer-buttons .btn-trial:hover {
+  background-color: rgb(11, 132, 180);
+  transition: background-color 0.3s ease;
+}
+
+.footer-buttons .btn-trial {
+  background-color: #f44336;
+  color: white;
+}
+
+.footer-buttons .btn-demo {
+  background-color: #3f51b5; /* Blue */
+  color: white;
+}
+
+.footer-buttons .btn-trial:hover,
+.footer-buttons .btn-demo:hover {
+  opacity: 0.8;
+}
+
+/* Links section */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-icons img {
+  width: 120px;
+  margin: 10px;
+  transition: opacity 0.3s;
+}
+
+.footer-icons img:hover {
+  opacity: 0.8;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .footer-header h1 {
+    font-size: 28px;
+  }
+
+  .footer-buttons .btn-trial,
+  .footer-buttons .btn-demo {
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-icons img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-header h1 {
+    font-size: 24px;
+  }
+
+  .footer-buttons .btn-trial,
+  .footer-buttons .btn-demo {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+
+  .footer-column h3 {
+    font-size: 16px;
+  }
+
+  .footer-column ul li {
+    font-size: 12px;
+  }
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .compliance-header h2 {
+    font-size: 24px;
+  }
+
+  .compliance-header p {
+    font-size: 14px;
+  }
+
+  .compliance-grid {
+    grid-template-columns: 1fr 1fr;
+    margin-left: -132px;
+  }
+}
+
+@media (max-width: 480px) {
+  .compliance-grid {
+    grid-template-columns: 1fr;
+    
+  }
+  
+  .compliance-header h2 {
+    font-size: 20px;
+  }
+
+  .compliance-header p {
+    font-size: 12px;
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

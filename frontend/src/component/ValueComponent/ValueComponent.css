@@ -1,0 +1,315 @@
+
+/* General Layout */
+.value-container {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: -64px;
+  /* background: linear-gradient(to bottom, #9fb4c5 60%, #1167d6); */
+}
+
+/* Highlight Color */
+.highlight {
+  color: #a600ff;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Role Selector */
+.roles-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: -47px;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100px;
+}
+.role-card.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(78, 133, 204, 0.5); /* Your animated fill color */
+  animation: fillEffect 6s linear forwards;
+  z-index: 0; /* This keeps the background behind the image */
+}
+
+/* Ensure image sits above the ::after background */
+.role-card .role-image {
+  position: relative;
+  z-index: 1;
+}
+
+.role-card:hover {
+  transform: scale(1.05);
+}
+
+.role-card {
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Default inactive role */
+.role-card:not(.active) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Active role with animated left-to-right filling */
+.role-card.active {
+  border-color: #0e3e6b;
+  color: #333;
+}
+
+.role-card.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;  /* Start from 0 width */
+  height: 100%;
+  background: rgba(78, 133, 204, 0.5); /* Semi-transparent yellow fill */
+  animation: fillEffect 6s linear forwards;
+}
+
+/* Animation to gradually fill the card from left to right */
+@keyframes fillEffect {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+/* Content Layout */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Left Section (Without & With greyHR) */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  width: 47%;
+  gap: 20px;
+}
+
+.info-box {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.without-greyhr {
+  background: #f8f9fc;
+  /* margin-left: 222px; */
+  margin-left: 114px;
+  margin-right: 16px;
+}
+
+.with-greyhr {
+  background: #e6ffea;
+  margin-left: 114px;
+  margin-right: 16px;
+}
+
+/* Task Section (Right Side) */
+.task-container {
+  width: 36%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 146px;
+  background-color: #e6ffea;
+  border-radius: 10px;
+  height: 435px;
+}
+
+/* User Image */
+.person-image {
+  max-width: 415px;
+  border-radius: 10px;
+  height: 400px;
+  margin-left: 22px;
+  margin-top: 13px;
+}
+
+/* 📌 Mobile Responsiveness */
+/* 📌 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .roles-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    margin-bottom: 0;
+  }
+
+  
+  .role-card {
+    display: none;
+  }
+
+  
+  .role-card.active {
+    display: flex;
+    width: 50%; 
+    margin-bottom: 15px; 
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section {
+    width: 100%;
+    align-items: center;
+  }
+
+  .info-box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .task-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .person-image {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+ 
+  .value-container {
+    padding: 30px 10px;
+  }
+
+  
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .role-card {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .role-card.active::after {
+    animation: fillEffect 6s linear forwards;
+  }
+
+
+  .task-container {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .info-box {
+    margin-left: 0;
+  }
+
+  .role-card {
+    flex: 1 1 100%; 
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .person-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .info-box {
+    padding: 15px;
+  }
+
+  .value-container {
+    padding: 20px 10px;
+  }
+
+  .task-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  .role-card.active::after {
+    animation: fillEffect 6s linear forwards;
+  }
+  @media (max-width: 1200px) {
+    .content-container {
+      flex-wrap: wrap;
+      justify-content: center; 
+    }
+  
+    .left-section {
+      width: 50%; 
+    }
+  
+    .task-container {
+      width: 40%;
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+    }
+  
+    .left-section,
+    .task-container {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .value-container {
+      margin-top: 20px;
+    }
+  }
+  
+  
+}

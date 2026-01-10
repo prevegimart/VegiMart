@@ -1,0 +1,177 @@
+/* Wall of Love Section */
+.wall-of-love-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 28px;
+    padding: 40px 20px;
+    background-color: #f4f8fc;
+  }
+  
+  /* Left side of the Wall of Love - Text */
+  .wall-left {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    margin: 10%;
+    margin-left: 4%;
+    margin-top: 7%;
+  }
+  
+  .wall-left h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .wall-left p {
+    font-size: 20px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Testimonials Wrapper */
+  .testimonials-wrapper {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Testimonials Container */
+  .testimonials-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-right: 34px;
+  }
+  
+  /* Individual Testimonial */
+  .testimonial-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 36%;
+    height: 350px;
+  }
+  
+  .testimonial-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0a9bca;
+  }
+  
+  .testimonial-item p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+  }
+  
+  .testimonial-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .testimonial-footer img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .testimonial-footer h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .testimonial-footer p {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  /* Navigation Arrows */
+  .testimonial-nav-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #0a9bca;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .testimonial-nav-icon:hover {
+    color: #333;
+  }
+  
+  .left-arrow {
+    left: -40px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  /* Dots */
+  /* Dots */
+.dots-container {
+    display: flex;
+    justify-content: center;  /* Center dots below testimonials */
+    gap: 8px;
+    margin-top: 20px;  /* Space from testimonials */
+    position: absolute;
+    bottom: -30px; /* Moves dots below testimonial */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #0a9bca;
+  }
+  
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .wall-of-love-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .wall-left {
+      text-align: center;
+      padding-right: 0;
+      margin-bottom: 20px;
+      
+    }
+  
+    .testimonials-container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .testimonial-item {
+      width: 90%;
+      text-align: left;
+    }
+  
+    .testimonial-nav-icon {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.partner-page {
+  min-height: 100vh;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+
+  /* VegiMart-style soft linear gradient */
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f3faf7 35%,
+    #e6f3ee 65%,
+    #c0ffe7 100%
+  );
+}
+
+
+/* MAIN LAYOUT */
+.partner-container {
+  max-width: 1200px;
+  margin: 53px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+/* CONTENT BLOCK */
+.partner-card {
+  position: relative;
+}
+
+/* ICON */
+.partner-card img {
+  width: 135px;
+  margin-bottom: 93px;
+}
+
+/* TEXT */
+.partner-card p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #2d2d2d;
+  max-width: 320px;
+  margin: 0 auto 70px;
+}
+
+/* ARROW BUTTON */
+.arrow-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover {
+  transform: translateX(6px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .partner-container {
+    grid-template-columns: 1fr;
+    gap: 70px;
+    margin-top: 50px;
+  }
+}

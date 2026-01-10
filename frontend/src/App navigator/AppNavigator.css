@@ -1,0 +1,151 @@
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2e7d32;
+  text-decoration: none;
+  /* white-space: nowrap; */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: rgb(255, 255, 255);
+  padding: 4px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: -31px; */
+}
+
+/* Logo Styling */
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 20px;
+  color: black;
+}
+
+/* Navbar list */
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-left: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-item {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-link {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+  padding-bottom: 2px;
+}
+
+.nav-link:hover {
+  color: #746ed1;
+}
+
+/* Active underline style */
+.nav-link.active {
+  border-bottom: 3px solid #3175e0;
+  color: black;
+  border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+
+  .nav-list.open {
+    display: flex;
+    top: 36px;
+  }
+
+  .nav-item {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-logo {
+    height: 40px;
+  }
+
+  .menu-icon {
+    font-size: 26px;
+  }
+
+  .nav-list {
+    top: 50px;
+  }
+
+  .navbar {
+    padding: 4px 6px;
+  }
+}
+
+.account-wrapper {
+  position: relative;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 260px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  padding: 12px;
+  z-index: 9999;
+}
+
