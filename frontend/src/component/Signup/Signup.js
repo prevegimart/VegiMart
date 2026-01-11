@@ -3,7 +3,11 @@ import "./Signup.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+
+
+
 export default function Signup() {
+    const API = process.env.REACT_APP_API_URL;
     const navigate = useNavigate();
     const [form, setForm] = useState({
     name: "",
@@ -12,12 +16,12 @@ export default function Signup() {
   });
 
   const handleSubmit = async (e) => {
-
+    console.log(API,"API");
     e.preventDefault();
 
     try {
-      // const res = await axios.post("http://localhost:5000/api/auth/signup", form);
-      const res = await axios.post("https://vegimart-back.onrender.com/api/auth/signup", form);
+      const res = await axios.post(`${API}/api/auth/signup`, form);
+      // const res = await axios.post("https://vegimart-back-fnli.onrender.com/api/auth/signup", form);
       alert("Signup successful");
       navigate("/");
     } catch (err) {

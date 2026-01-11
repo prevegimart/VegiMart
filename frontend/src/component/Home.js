@@ -15,13 +15,13 @@ function Home() {
         <div>
         <Navigator />
         <Dashboard/>
-       <MetricsSection/>
+       {/* <MetricsSection/>
        <WallofLove/>
        <TimeTrackingSection/>
        <ValueComponent/>
        <Features/>
        <CommunitySection/>
-       <ComplianceSection/>
+       <ComplianceSection/> */}
        <FooterSection/>
         </div>
     );
